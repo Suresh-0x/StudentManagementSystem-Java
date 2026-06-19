@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Update Student</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+
+        function showField() {
+
+            var option =
+            document.getElementById("field").value;
+
+            document.getElementById("nameDiv")
+            .style.display = "none";
+
+            document.getElementById("emailDiv")
+            .style.display = "none";
+
+            document.getElementById("courseDiv")
+            .style.display = "none";
+
+            document.getElementById("phoneDiv")
+            .style.display = "none";
+
+            if(option == "student_name") {
+
+                document.getElementById("nameDiv")
+                .style.display = "block";
+            }
+
+            else if(option == "student_email") {
+
+                document.getElementById("emailDiv")
+                .style.display = "block";
+            }
+
+            else if(option == "student_course") {
+
+                document.getElementById("courseDiv")
+                .style.display = "block";
+            }
+
+            else if(option == "student_phone") {
+
+                document.getElementById("phoneDiv")
+                .style.display = "block";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<form action="UpdateStudentServlet"
+      method="post">
+
+    <h1>Update Student</h1>
+
+    <input type="number"
+           name="student_id"
+           placeholder="Enter Student ID"
+           required>
+
+    <select name="field"
+            id="field"
+            onchange="showField()"
+            required>
+
+        <option value="">
+            Select Field
+        </option>
+
+        <option value="student_name">
+            Update Name
+        </option>
+
+        <option value="student_email">
+            Update Email
+        </option>
+
+        <option value="student_course">
+            Update Course
+        </option>
+
+        <option value="student_phone">
+            Update Phone
+        </option>
+
+    </select>
+
+    <div id="nameDiv"
+         style="display:none;">
+
+        <input type="text"
+               name="student_name"
+               placeholder="Enter New Name">
+
+    </div>
+
+    <div id="emailDiv"
+         style="display:none;">
+
+        <input type="email"
+               name="student_email"
+               placeholder="Enter New Email">
+
+    </div>
+
+    <div id="courseDiv"
+         style="display:none;">
+
+        <input type="text"
+               name="student_course"
+               placeholder="Enter New Course">
+
+    </div>
+
+    <div id="phoneDiv"
+         style="display:none;">
+
+        <input type="text"
+               name="student_phone"
+               placeholder="Enter New Phone">
+
+    </div>
+
+    <button type="submit">
+
+        Update
+
+    </button>
+
+</form>
+
+</body>
+</html>

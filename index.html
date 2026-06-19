@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Add Student</h1>
+
+    <form action="AddStudentServlet"
+          method="post">
+
+        <input type="text"
+               name="student_name"
+               placeholder="Student Name"
+               required>
+
+        <input type="email"
+               name="student_email"
+               placeholder="Email"
+               required>
+
+        <input type="text"
+               name="student_course"
+               placeholder="Course"
+               required>
+
+        <input type="text"
+               name="student_phone"
+               placeholder="Phone Number"
+               required>
+
+        <button type="submit">
+
+            Add Student
+
+        </button>
+
+    </form>
+
+    <div id="message"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

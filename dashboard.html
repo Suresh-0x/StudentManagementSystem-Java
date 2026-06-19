@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2 class="main-heading">
+
+        Student Management System
+
+    </h2>
+
+    <h1>
+
+        Dashboard
+
+    </h1>
+
+    <div class="dashboard">
+
+        <div class="card">
+
+            <a href="index.html">
+
+                Add Student
+
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <a href="ViewStudentsServlet">
+
+                View Students
+
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <a href="update.html">
+
+                Update Student
+
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <a href="delete.html">
+
+                Delete Student
+
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <a href="search.html">
+
+                Search Student
+
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <a href="LogoutServlet">
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+const params =
+new URLSearchParams(
+window.location.search);
+
+if(params.get("login")=="success"){
+
+    alert("🎉 Welcome Admin");
+}
+
+</script>
+
+</body>
+</html>
